@@ -65,3 +65,12 @@ function splitAndAdd(digits){
     if(digits < 10)return digits;
 return digits % 10 + splitAndAdd(Math.floor(digits / 10));
 }
+//フィボナッチ数列
+function fibonaccinumber(n){    
+    if(n === 0){
+        return 0;
+    }else if(n === 1){
+        return 1;
+    }
+    return fibonaccinumber(n-1) + fibonaccinumber(n-2);
+}
