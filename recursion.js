@@ -42,3 +42,21 @@ function numberOfDots(x){
     return numberOfDots(x-1) + x;
 }
 //文字列を再帰的に逆表示する
+function reverseString(s){
+    if(s.length <= 0) return s;
+
+    return s[s.length-1] + reverseString(s.slice(0,-1));
+}
+//2つの自然数の最大公約数を再帰的に求める関数
+function getgcd(m,n){
+    if((m % n) === 0){
+        return n;
+    }else{
+        return getgcd(n,m % n);
+    }
+}
+//数字をそれぞれ分割して足す
+function splitAndAdd(digits){
+    if(digits < 10)return digits;
+return digits % 10 + splitAndAdd(Math.floor(digits / 10));
+}
