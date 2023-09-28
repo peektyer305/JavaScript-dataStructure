@@ -65,7 +65,7 @@ function splitAndAdd(digits){
     if(digits < 10)return digits;
 return digits % 10 + splitAndAdd(Math.floor(digits / 10));
 }
-//フィボナッチ数列
+//フィボナッチ数列，この時間計算量は O(2**n)空間計算量O(n)
 function fibonaccinumber(n){    
     if(n === 0){
         return 0;
@@ -82,3 +82,7 @@ function helper(count,total){
     if( count <= 0)return total;
     return helper(count-1,total+count);
 }
+/*simpleSummationの時間・空間計算量＝O(n),O(n)
+末尾再帰 = O(n),O(1) */
+
+
