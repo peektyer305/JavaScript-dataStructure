@@ -74,3 +74,11 @@ function fibonaccinumber(n){
     }
     return fibonaccinumber(n-1) + fibonaccinumber(n-2);
 }
+//末尾再帰
+function summationTail(n){
+    return helper(n,0)
+}
+function helper(count,total){
+    if( count <= 0)return total;
+    return helper(count-1,total+count);
+}
