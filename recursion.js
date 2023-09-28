@@ -26,7 +26,12 @@ function summation(n){
 
     return summation(n-1) + n;
 }
+//総和の総和
+function summationOfSummation(n){
+    if(n <= 0)return 0;
 
+    return summation(n) + summationOfSummation(n-1);
+}
 //1からｎまでの整数の積
 function factorial(n){
     if(n <= 0) return 1;
